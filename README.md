@@ -1,4 +1,4 @@
-# DEPOkod Codewars challenges
+# DEPOkod programming challenges
 
 Our little playground to see what challenges have we completed so far.
 
@@ -10,3 +10,7 @@ Our little playground to see what challenges have we completed so far.
 ### DEPOkod #2
 - https://www.codewars.com/kata/5467e4d82edf8bbf40000155
 - https://www.codewars.com/kata/how-old-will-i-be-in-2099
+
+### DEPOkod #4
+- Guessing game (guess the number that computer generated)
+- Mincovka (give the coins in the most efficient way)
