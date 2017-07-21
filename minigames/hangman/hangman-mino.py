@@ -4,10 +4,21 @@ class Hangman:
     """Simple Hangman game"""
     def __init__(self):
         """Prepare some global vars."""
-        self.lives = 4
+        self.lives_max = 4
+        self.lives = self.lives_max
         self.guessed_chars = []
         self.done = False
         self.placehoder = "_"
+        self.gui = [
+            '   ------ ',
+            '   |    | ',
+            '   |      ',
+            '   |      ',
+            '   |      ',
+            '  /|\     ',
+            ' / | \    ',
+            '----------',
+        ]
 
     def start(self):
         """Initiate the game."""
@@ -25,10 +36,12 @@ class Hangman:
             self.guess_iteration()
 
         # End the game with message.
+        print(self.print_hangman())
         print(self.get_ending_game_string())
 
     def print_iteration(self):
         """Print current iteration."""
+        print(self.print_hangman())
         print("Remaining lives: " + str(self.lives))
         print("Guessed letters: " + ", ".join(self.guessed_chars))
         print("So far correctly guessed:" + "".join(self.guess))
@@ -64,6 +77,42 @@ class Hangman:
                 # End the game if there are no lives.
                 if self.lives <= 0:
                     self.done = True
+
+    def print_hangman(self):
+        """Print the hangman gui."""
+        out = ""
+        current_gui = self.gui
+
+        if self.lives == self.lives_max - 1:
+            line = list(current_gui[2])
+            line[8] = "O"
+            current_gui[2] = "".join(line)
+        if self.lives == self.lives_max - 2:
+            line = list(current_gui[3])
+            line[8] = "|"
+            current_gui[3] = "".join(line)
+
+            line = list(current_gui[4])
+            line[8] = "|"
+            current_gui[4] = "".join(line)
+        if self.lives == self.lives_max - 3:
+            line = list(current_gui[2])
+            line[7] = "\\"
+            line[9] = "/"
+            current_gui[2] = "".join(line)
+        if self.lives == self.lives_max - 4:
+            line = list(current_gui[5])
+            line[7] = "/"
+            line[9] = "\\"
+            current_gui[5] = "".join(line)
+
+
+        for line in self.gui:
+            for c in line:
+                out += c
+            out += "\n"
+
+        return out
 
     def get_ending_game_string(self):
         """Get ending game string"""
