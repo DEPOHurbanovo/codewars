@@ -14,3 +14,6 @@ Our little playground to see what challenges have we completed so far.
 ### DEPOkod #4
 - Guessing game (guess the number that computer generated)
 - Mincovka (give the coins in the most efficient way)
+
+### DEPOkod #5
+- Hangman - /minigames/hangman (hangman minigame)
