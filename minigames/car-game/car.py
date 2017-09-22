@@ -45,7 +45,7 @@ while 1:
     if keys_state[pygame.K_DOWN] == True:
         y_change = speed[1]
         is_moving = True
-    if not moving:
+    if not is_moving:
         x_change = 0
         y_change = 0
 
