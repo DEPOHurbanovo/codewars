@@ -1,4 +1,5 @@
 import sys, pygame
+
 pygame.init()
 clock = pygame.time.Clock()
 
@@ -22,25 +23,31 @@ while 1:
     x = 0
     y = 0
 
+    keys_state = pygame.key.get_pressed()
+
+    x_change = 0
+    y_change = 0
+
+    is_moving = False
+    if keys_state[pygame.K_LEFT] == 1:
+        x_change = -speed[0]
+        is_moving = True
+    if keys_state[pygame.K_RIGHT] == 1:
+        x_change = speed[0]
+        is_moving = True
+    if keys_state[pygame.K_UP] == 1:
+        y_change = -speed[1]
+        is_moving = True
+    if keys_state[pygame.K_DOWN] == 1:
+        y_change = speed[1]
+        is_moving = True
+
+    if is_moving == False:
+        x_change = 0;
+        y_change = 0;
+   
     for event in pygame.event.get():
         if event.type == pygame.QUIT: sys.exit()
-
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_LEFT:
-                x_change = -speed[0]
-            if event.key == pygame.K_RIGHT:
-                x_change = speed[0]
-            if event.key == pygame.K_UP:
-                y_change = -speed[1]
-            if event.key == pygame.K_DOWN:
-                y_change = speed[1]
-
-
-        if event.type == pygame.KEYUP:
-            if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
-                x_change = 0
-            if event.key == pygame.K_UP or event.key == pygame.K_DOWN:
-                y_change = 0
 
     x += x_change
     y += y_change
@@ -55,8 +62,9 @@ while 1:
     wall_left = pygame.draw.rect(screen, grey, (0, 0, 10, size[1]))
     wall_right = pygame.draw.rect(screen, grey, (size[0], 0, -10, size[1]))
 
+    
     if car_rect.colliderect(grass_left) or car_rect.colliderect(grass_right):
-        speed = [2, 2]
+        speed = [2, 2]   
     else:
         speed = [5, 5]
 
