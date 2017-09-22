@@ -1,4 +1,5 @@
 import sys, pygame
+
 pygame.init()
 clock = pygame.time.Clock()
 
@@ -31,19 +32,19 @@ while 1:
     for event in pygame.event.get():
         if event.type == pygame.QUIT: sys.exit()
 
-    moving = False
+    is_moving = False
     if keys_state[pygame.K_LEFT] == True:
         x_change = -speed[0]
-        moving = True
+        is_moving = True
     if keys_state[pygame.K_RIGHT] == True:
         x_change = speed[0]
-        moving = True
+        is_moving = True
     if keys_state[pygame.K_UP] == True:
         y_change = -speed[1]
-        moving = True
+        is_moving = True
     if keys_state[pygame.K_DOWN] == True:
         y_change = speed[1]
-        moving = True
+        is_moving = True
     if not moving:
         x_change = 0
         y_change = 0
