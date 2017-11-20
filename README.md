@@ -2,6 +2,9 @@
 
 DEPOkod playground.
 
+Some exercise/games have multiple files suffixed with nicknames of attendees,
+these usually contain different approaches to the same challenge.
+
 ## What have we done so far:
 
 ### DEPOkod #01
@@ -12,8 +15,8 @@ DEPOkod playground.
 - https://www.codewars.com/kata/how-old-will-i-be-in-2099
 
 ### DEPOkod #04
-- Guessing game (guess the number that computer generated)
-- Mincovka (give the coins in the most efficient way)
+- Guessing game (guess the number that computer generated) - [minigames/guessing-game](minigames/guessing-game)
+- Mincovka (give the coins in the most efficient way) - [minigames/mincovka.py](minigames/mincovka.py)
 
 ### DEPOkod #05
 - Hangman - [minigames/hangman](minigames/hangman) (hangman minigame)
