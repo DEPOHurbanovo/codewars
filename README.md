@@ -17,12 +17,15 @@ DEPOkod playground.
 
 ### DEPOkod #05
 - Hangman - /minigames/hangman (hangman minigame)
-![](https://res.cloudinary.com/m1n0/image/upload/v1500902497/hangman_fjzpxm.gif)
+
+![](http://res.cloudinary.com/m1n0/image/upload/v1500902497/hangman_fjzpxm.gif)
 
 ### DEPOkod #06 - 08
 - Initial work on scroller car game
-![](http://res.cloudinary.com/m1n0/image/upload/v1504028657/car_hno2p7.gif)
+
+![](http://res.cloudinary.com/m1n0/image/upload/c_scale,w_418/v1504028657/car_hno2p7.gif)
 
 ### DEPOkod #09 - 10
 - Playing with image processing, trying color extraction
+
 ![](http://res.cloudinary.com/m1n0/image/upload/v1511211442/opencv_1_z7vclq.gif)
