@@ -16,7 +16,7 @@ these usually contain different approaches to the same challenge.
 
 ### DEPOkod #04
 - Guessing game (guess the number that computer generated) - [minigames/guessing-game](minigames/guessing-game)
-- Mincovka (give the coins in the most efficient way) - [minigames/mincovka.py](minigames/mincovka.py)
+- Mincovka (give the coins in the most efficient way) - [minigames/mincovka](minigames/mincovka)
 
 ### DEPOkod #05
 - Hangman - [minigames/hangman](minigames/hangman) (hangman minigame)
