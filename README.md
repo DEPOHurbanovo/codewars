@@ -18,7 +18,7 @@ DEPOkod playground.
 ### DEPOkod #05
 - Hangman - /minigames/hangman (hangman minigame)
 
-![](http://res.cloudinary.com/m1n0/image/upload/v1500902497/hangman_fjzpxm.gif)
+![](http://res.cloudinary.com/m1n0/image/upload/v1511212145/hangman_st2mxu.gif)
 
 ### DEPOkod #06 - 08
 - Initial work on scroller car game
